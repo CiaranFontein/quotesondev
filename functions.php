@@ -57,6 +57,7 @@ add_filter( 'stylesheet_uri', 'qod_minified_css', 10, 2 );
  */
 function qod_scripts() {
 	wp_enqueue_style( 'qod-style', get_stylesheet_uri() );
+	wp_enqueue_style('qod_fontawesome','https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
 	wp_enqueue_script( 'qod', get_template_directory_uri() . '/build/js/qod.min.js', array(), '', true );
 	wp_enqueue_script( 'qod-starter-navigation', get_template_directory_uri() . '/build/js/navigation.min.js', array(), '20151215', true );
@@ -89,3 +90,8 @@ require get_template_directory() . '/inc/metaboxes.php';
  * Custom WP API modifications.
  */
 require get_template_directory() . '/inc/api.php';
+
+function add_google_fonts() {
+	wp_enqueue_style( ' add_google_fonts ', 'https://fonts.googleapis.com/css?family=Exo:400,400i,500,500i,600,600i,700,700i,800&display=swap', false );
+}
+add_action( 'wp_enqueue_scripts', 'add_google_fonts' );

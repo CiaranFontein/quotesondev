@@ -6,6 +6,29 @@
 .quotation-mark {
     font-size: 10rem;
     color: $color__green-brand;
+    margin: 50px;
+}
+
+/* Site Header */
+.site-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.site-logo {
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+/* Quote Metadata */
+.entry-meta {
+    display: flex;
+    flex-direction: row;
+
+    .quote-author {
+        font-size: 1.5rem;
+    }
 }
 
 /* Posts and pages */

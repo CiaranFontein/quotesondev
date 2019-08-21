@@ -16,10 +16,10 @@ get_header(); ?>
 
             <?php if( is_user_logged_in() && current_user_can( 'edit_posts' ) ): ?>
             <div class="quote-submission-wrapper">
-                <form name="quote-form" id="quote-submission-form">
+                <form name="quote-form" id="quote-submission-form" class="submit-form">
                     <div>
-                        <label for="quote-author">Author of Quote</label>
-                        <input type="text" name="quote_author" id="quote-author" required>
+                        <label for="author">Author of Quote</label>
+                        <input type="text" name="author" id="author">
                     </div>
                     <div>
                         <label for="quote">Quote</label>
@@ -27,11 +27,11 @@ get_header(); ?>
                     </div>
                     <div>
                         <label for="source">Source</label>
-                        <input type="text" name="source" id="source" required>
+                        <input type="text" name="source" id="source">
                     </div>
                     <div>
                         <label for="source-url">Source URL</label>
-                        <input type="url" name="source_url" id="source-url" required>
+                        <input type="url" name="source_url" id="source-url">
                     </div>
                     <div>
                         <input type=submit value="Submit Quote">

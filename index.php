@@ -11,9 +11,7 @@ get_header(); ?>
     <main id="main" class="site-main" role="main">
 
         <div class="container">
-            <div class="quotation-mark">
-                <i class="fas fa-quote-left"></i>
-            </div>
+            <div class="quotation-mark"><i class="fas fa-quote-left"></i></div>
             <div class="quote">
                 <?php if ( have_posts() ) : ?>
 
@@ -29,9 +27,6 @@ get_header(); ?>
                 <?php get_template_part( 'template-parts/content' ); ?>
 
                 <?php endwhile; ?>
-
-                <?php the_posts_navigation(); ?>
-
                 <?php else : ?>
 
                 <?php get_template_part( 'template-parts/content', 'none' ); ?>

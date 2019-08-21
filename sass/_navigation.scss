@@ -6,6 +6,7 @@
 
 a {
     color: $color__link;
+    text-decoration: none;
 
     &:visited {
         color: $color__link-visited;
@@ -136,4 +137,17 @@ a {
         text-align: right;
         width: 50%;
     }
+}
+
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: right;
+    margin: 100px;
+}
+
+ul {
+    padding-inline-start: 0;
+    margin: 0;
 }
