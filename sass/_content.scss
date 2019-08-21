@@ -2,11 +2,33 @@
 # Content
 --------------------------------------------------------------*/
 
+/* Quotation Marks */
+.quotation-mark {
+    font-size: 10rem;
+}
+
 /* Posts and pages */
 
 .site-content {
     background: black;
-    color: white;
+    color: green;
+    font-family: $exo;
+}
+
+.container {
+    width: 1080px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.site-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
 }
 
 .sticky {
