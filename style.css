@@ -230,7 +230,7 @@ button,
 input,
 select,
 textarea {
-  color: #404040;
+  color: #fff;
   font-family: sans-serif;
   font-size: 1rem;
   line-height: 1.5; }
@@ -284,10 +284,8 @@ html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-size: 1rem;
-  color: #fff; }
-
-body {
-  background: #222; }
+  color: #fff;
+  font-family: "Exo", serif; }
 
 h1 {
   font-size: 3rem; }
@@ -300,7 +298,7 @@ h1 {
           box-sizing: inherit; }
 
 body {
-  background: #fff;
+  background: #222;
   /* Fallback for when there is no custom background color defined. */ }
 
 blockquote,
@@ -419,11 +417,11 @@ textarea {
 --------------------------------------------------------------*/
 /* Links */
 a {
-  color: royalblue; }
+  color: #00cc00; }
   a:visited {
-    color: purple; }
+    color: #00cc00; }
   a:hover, a:focus, a:active {
-    color: midnightblue; }
+    color: #0e0; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
@@ -462,6 +460,8 @@ a {
   .main-navigation li {
     float: left;
     position: relative; }
+    .main-navigation li li:after {
+      content: " |"; }
   .main-navigation a {
     display: block;
     text-decoration: none; }
@@ -507,7 +507,7 @@ a {
   width: 1px;
   overflow: hidden; }
   .screen-reader-text:focus {
-    background-color: #f1f1f1;
+    background-color: #222;
     border-radius: 3px;
     -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
             box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
@@ -558,14 +558,10 @@ a {
 --------------------------------------------------------------*/
 /* Quotation Marks */
 .quotation-mark {
-  font-size: 10rem; }
+  font-size: 10rem;
+  color: #00cc00; }
 
 /* Posts and pages */
-.site-content {
-  background: black;
-  color: green;
-  font-family: "Exo", serif; }
-
 .container {
   width: 1080px;
   display: -webkit-box;
@@ -588,15 +584,7 @@ a {
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  width: 100%; }
+          justify-content: center; }
 
 .sticky {
   display: block; }
