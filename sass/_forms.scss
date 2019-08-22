@@ -33,6 +33,10 @@ input[type="submit"] {
 
 /* Fields */
 
+fieldset {
+    border: none;
+}
+
 input[type="text"],
 input[type="email"],
 input[type="url"],
@@ -40,8 +44,9 @@ input[type="password"],
 input[type="search"],
 textarea {
     color: #666;
-    border: 1px solid #ccc;
+    border: 2px solid #0c0;
     border-radius: 3px;
+    background: #222;
 
     &:focus {
         color: #111;
