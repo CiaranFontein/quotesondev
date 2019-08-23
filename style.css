@@ -509,6 +509,9 @@ textarea {
   padding-left: 3px;
   width: 100%; }
 
+.hidden-message {
+  display: none; }
+
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
@@ -609,6 +612,12 @@ a {
       -ms-flex-align: right;
           align-items: right;
   margin: 100px; }
+  @media (min-width: 1000px) {
+    .nav-bar {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
 
 ul {
   -webkit-padding-start: 0;

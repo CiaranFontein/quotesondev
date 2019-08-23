@@ -15,6 +15,7 @@ get_header(); ?>
                 <h1 class="entry-title"><?php the_title() ?></h1>
             </header>
             <div class="container">
+                <div class="quotation-mark"><i class="fas fa-quote-left"></i></div>
                 <?php if( is_user_logged_in() && current_user_can( 'edit_posts' ) ): ?>
 
                 <div class="quote-submission-wrapper">
@@ -43,7 +44,7 @@ get_header(); ?>
                         <p>Quote Successfully Submitted</p>
                     </div>
                 </div>
-
+                <div class="quotation-mark"><i class="fas fa-quote-right"></i></div>
             </div>
             <?php else: ?>
             <p> Sorry, you must be logged in to submit a quote :( </p>
