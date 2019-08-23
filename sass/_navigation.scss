@@ -140,11 +140,16 @@ a {
 }
 
 .nav-bar {
+
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     align-items: right;
     margin: 100px;
+
+    @include desktop {
+        flex-direction: column;
+    }
 }
 
 ul {
