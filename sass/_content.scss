@@ -7,6 +7,15 @@
     font-size: 10rem;
     color: $color__green-brand;
     margin: 50px;
+    display: none;
+
+    @include tablet {
+        display: none;
+    }
+
+    @include desktop {
+        display: block;
+    }
 }
 
 /* Site Header */
@@ -34,6 +43,7 @@
 /* Posts and pages */
 
 .container {
+    margin: 0px 40px;
     width: 1080px;
     display: flex;
     justify-content: center;

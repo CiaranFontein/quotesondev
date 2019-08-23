@@ -1,7 +1,5 @@
 (function($) {
   $(function() {
-    //ajax javascript
-
     //1 get request wp/v2/posts
     $('#new-quote-button').on('click', function(event) {
       event.preventDefault();
@@ -12,14 +10,18 @@
           'wp/v2/posts?filter[orderby]=rand&filter[posts_per_page]=1'
       })
         .done(function(data) {
-          console.log(data);
+          newQuote = data[0];
+          $('.entry-content').html(newQuote.content.rendered);
+          $('#author').html('- ' + newQuote.title.rendered);
+          $('#source_url').html(newQuote._qod_quote_source_url);
+          $('#source').html(', ' + newQuote._qod_quote_source);
         })
         .fail(function(err) {
           console.log('error', err);
         });
     });
-    //2 post request for wp/v2/posts
 
+    //2 post request for wp/v2/posts
     $('#quote-submission-form').on('submit', function(event) {
       const authorVal = $('#author').val();
       const quoteVal = $('#quote').val();
@@ -27,6 +29,7 @@
       const sourceURLVal = $('#source_url').val();
 
       event.preventDefault();
+
       $.ajax({
         method: 'post',
         url: qod_api.rest_url + 'wp/v2/posts/',
@@ -41,10 +44,10 @@
         }
       })
         .done(function(response) {
-          alert('Success! Quote successfully submitted');
-          $('.submit-form').addClass('submit-form--hidden');
-          //TD hide form using slide toggle or something like that or slide up
-          //append message thanks for submitting
+          $('.submit-form').slideUp();
+          $('.hidden-message')
+            .slideDown()
+            .delay(1800);
         })
         .fail(function() {
           //fail message

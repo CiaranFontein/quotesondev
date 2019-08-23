@@ -12,7 +12,7 @@ get_header(); ?>
 
         <div class="container">
             <div class="quotation-mark"><i class="fas fa-quote-left"></i></div>
-            <div class="quote">
+            <div id="quote" class="quote">
                 <?php if ( have_posts() ) : ?>
 
                 <?php if ( is_home() && ! is_front_page() ) : ?>
