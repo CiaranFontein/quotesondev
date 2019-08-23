@@ -1,8 +1,10 @@
 (function($) {
   $(function() {
+    let lastPage = document.URL;
     //1 get request wp/v2/posts
     $('#new-quote-button').on('click', function(event) {
       event.preventDefault();
+      lastPage = document.URL;
       $.ajax({
         method: 'get',
         url:
@@ -33,10 +35,21 @@
           } else {
             $('#source').html('');
           }
+
+          //History api to get
+          const slug = newQuote.slug;
+          console.log(slug);
+          const url = qod_api.home_url + '/' + slug + '/';
+          console.log(url);
+          history.pushState(null, null, url);
         })
-        .fail(function(err) {
-          console.log('error', err);
-        });
+
+        .fail(function(err) {});
+    });
+
+    //Add history api popstate to forward and back buttons
+    $(window).on('popstate', function() {
+      window.location.replace(lastPage);
     });
 
     //2 post request for wp/v2/posts
