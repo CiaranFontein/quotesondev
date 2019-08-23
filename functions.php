@@ -92,6 +92,6 @@ require get_template_directory() . '/inc/metaboxes.php';
 require get_template_directory() . '/inc/api.php';
 
 function add_google_fonts() {
-	wp_enqueue_style( ' add_google_fonts ', 'https://fonts.googleapis.com/css?family=Exo:400,400i,500,500i,600,600i,700,700i,800&display=swap', false );
+	wp_enqueue_style( 'google_fonts', 'https://fonts.googleapis.com/css?family=Exo:400,400i,500,500i,600,600i,700,700i,800&display=swap', false );
 }
 add_action( 'wp_enqueue_scripts', 'add_google_fonts' );

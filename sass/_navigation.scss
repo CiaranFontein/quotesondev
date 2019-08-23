@@ -25,6 +25,7 @@ a {
     &:hover,
     &:active {
         outline: 0;
+        color: #0e0;
     }
 }
 
@@ -84,10 +85,6 @@ a {
         float: left;
         position: relative;
 
-        li:after {
-            content: " |";
-        }
-
         &:hover>a,
         &.focus>a {}
     }
@@ -140,15 +137,14 @@ a {
 }
 
 .nav-bar {
-
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: flex-end;
     align-items: right;
     margin: 100px;
 
     @include desktop {
-        flex-direction: column;
+        flex-direction: row;
     }
 }
 

@@ -360,8 +360,13 @@ ol {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row; }
-  .nav-bar ul li:after {
-    content: "\2005 \2005 \2005| \2005 \2005 \2005"; }
+  .nav-bar ul li::after {
+    content: "\2005 \2005 \2005 | \2005 \2005 \2005"; }
+  .nav-bar ul li:nth-last-child(1):after {
+    content: ""; }
+    @media (min-width: 1000px) {
+      .nav-bar ul li:nth-last-child(1):after {
+        content: "\2005 \2005 \2005 | \2005 \2005 \2005"; } }
 
 ul li {
   list-style: none;
@@ -526,7 +531,8 @@ a {
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
-    outline: 0; }
+    outline: 0;
+    color: #0e0; }
 
 /* Menus */
 .main-navigation {
@@ -561,8 +567,6 @@ a {
   .main-navigation li {
     float: left;
     position: relative; }
-    .main-navigation li li:after {
-      content: " |"; }
   .main-navigation a {
     display: block;
     text-decoration: none; }
@@ -601,10 +605,10 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
@@ -614,10 +618,10 @@ a {
   margin: 100px; }
   @media (min-width: 1000px) {
     .nav-bar {
-      -webkit-box-orient: vertical;
+      -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column; } }
+          -ms-flex-direction: row;
+              flex-direction: row; } }
 
 ul {
   -webkit-padding-start: 0;
@@ -723,7 +727,8 @@ ul {
       -ms-flex-direction: row;
           flex-direction: row; }
   .entry-meta .quote-author {
-    font-size: 1.5rem; }
+    font-size: 1.5rem;
+    white-space: nowrap; }
 
 /* Posts and pages */
 .container {

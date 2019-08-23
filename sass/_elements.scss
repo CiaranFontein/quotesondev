@@ -53,8 +53,20 @@ ol {
     display: flex;
     flex-direction: row;
 
-    li:after {
-      content: "\2005 \2005 \2005| \2005 \2005 \2005";
+    li {
+      &::after {
+        content: "\2005 \2005 \2005 | \2005 \2005 \2005";
+      }
+
+      &:nth-last-child(1) {
+        &:after {
+          content: "";
+
+          @include desktop {
+            content: "\2005 \2005 \2005 | \2005 \2005 \2005";
+          }
+        }
+      }
     }
   }
 }

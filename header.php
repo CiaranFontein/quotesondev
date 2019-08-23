@@ -25,7 +25,7 @@
         <header id="masthead" class="site-header" role="banner">
             <h1 class="site-title screen-reader-text"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"
                     rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-            <img class="site-logo" src=".././wp-content/themes/quotesondev/images/qod-logo.svg">
+            <img class="site-logo" src="<?php echo get_template_directory_uri() ?>/images/qod-logo.svg">
         </header><!-- #masthead -->
 
         <div id="content" class="site-content">

@@ -13,8 +13,26 @@
           newQuote = data[0];
           $('.entry-content').html(newQuote.content.rendered);
           $('#author').html('- ' + newQuote.title.rendered);
-          $('#source_url').html(newQuote._qod_quote_source_url);
-          $('#source').html(', ' + newQuote._qod_quote_source);
+          if (newQuote._qod_quote_source && newQuote._qod_quote_source_url) {
+            $('#source').html(
+              "<div class='source' id='source'>, <a href='" +
+                newQuote._qod_quote_source_url +
+                "'>" +
+                newQuote._qod_quote_source +
+                '</a></div>'
+            );
+          } else if (
+            newQuote._qod_quote_source &&
+            !newQuote._qod_quote_source_url
+          ) {
+            $('#source').html(
+              "<div class='source' id='source'>, " +
+                newQuote._qod_quote_source +
+                '</div>'
+            );
+          } else {
+            $('#source').html('');
+          }
         })
         .fail(function(err) {
           console.log('error', err);
