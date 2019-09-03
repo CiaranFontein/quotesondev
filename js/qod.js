@@ -81,7 +81,7 @@
             .delay(1800);
         })
         .fail(function() {
-          //fail message
+          alert('Submission Failed');
         });
     });
   });

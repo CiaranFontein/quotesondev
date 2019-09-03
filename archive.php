@@ -19,7 +19,7 @@ get_header(); ?>
                         <?php echo ucwords(substr(get_the_archive_title(), 4)) ?>
                     </h1>
                 </header><!-- .page-header -->
-
+                <?php get_posts( "posts_per_page=5"); ?>
                 <?php /* Start the Loop */ ?>
                 <?php while ( have_posts() ) : the_post(); ?>
 
